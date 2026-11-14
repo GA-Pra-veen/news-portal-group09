@@ -1,9 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home University News Portal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruhuna News | Home</title>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+    :root {
+        --navy: #3d0b0b;
+        --navy2: #290404;
+        --gold: #e7b85c;
+
+        --ink: #1d2935;
+        --muted: #687786;
+
+        --paper: #f6f8fa;
+        --line: #e4e9ee;
+        --white: #fff;
+    }
+
+
+    /* Common styles used throughout the website */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        color: var(--ink);
+        font-family: 'DM Sans', Arial, sans-serif;
+        line-height: 1.65;
+        background: #fff;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .container {
+        width: min(1120px, calc(100% - 44px));
+        margin: auto;
+    }
+
+
+    /* header and navigation bar */
+
+    .site-header {
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        position: relative;
+        z-index: 2;
+    }
+
+    .header-inner {
+        min-height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    /* Website Logo */
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--navy);
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        line-height: 1.1;
+    }
+
+    .brand small {
+        display: block;
+        font-size: 9px;
+        letter-spacing: 2px;
+        color: var(--muted);
+        margin-top: 5px;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: var(--navy);
+        color: var(--gold);
+        display: grid;
+        place-items: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 17px;
+    }
+
+    /* Navigation Links */
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+        font-weight: 600;
+        color: #536170;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+        color: var(--navy);
+    }
+
+    .main-nav a.active {
+        box-shadow: 0 2px var(--gold);
+        padding: 9px 0;
+    }
+
+    /* Navigation Button */
+
+    .nav-button {
+        background: var(--navy);
+        color: #fff;
+        padding: 10px 17px;
+        border-radius: 6px;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .nav-button:hover,
+    .button-dark:hover {
+        background: var(--navy2);
+    }
+
+
+    /* Home page - Hero section */
+
+    .hero {
+        background: linear-gradient(
+            112deg,
+            #3d0b0b 0%,
+            #521313 72%,
+            #702525 100%
+        );
+
+        color: #fff;
+        min-height: 490px;
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        padding-top: 54px;
+        padding-bottom: 64px;
+    }
+
+    .eyebrow {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2.2px;
+        color: #b58a3e;
+        margin: 0 0 13px;
+    }
+
+    .hero h1,
+    .page-hero h1 {
+        font: 700 clamp(42px, 6vw, 68px)/1.08
+        'Playfair Display', Georgia, serif;
+
+        margin: 0;
+        letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+        color: var(--gold);
+    }
+
+    .hero-copy {
+        max-width: 510px;
+        color: #d5e0e8;
+        margin: 22px 0 28px;
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    /* Hero Decoration */
+
+    .hero-decoration {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+
+        transform: translateY(-50%) rotate(-9deg);
+
+        font: 800 clamp(70px, 12vw, 160px)/.8
+        'Playfair Display', serif;
+
+        color: #ffffff08;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 5px;
+        pointer-events: none;
+    }
+
+
+    /* Buttons and Links  */
+
+    .button {
+        display: inline-block;
+        border: 0;
+        border-radius: 6px;
+        padding: 13px 20px;
+
+        font: 700 13px 'DM Sans', sans-serif;
+        cursor: pointer;
+    }
+
+    .button-light {
+        background: var(--gold);
+        color: var(--navy);
+    }
+
+    .button-light:hover {
+        background: #f0c979;
+    }
+
+    .button-dark {
+        background: var(--navy);
+        color: #fff;
+    }
+
+    .text-link {
+        font-size: 13px;
+        font-weight: 700;
+        color: #9a702c;
+    }
+
+    .text-link:hover {
+        text-decoration: underline;
+    }
+
+    .light-link {
+        color: #fff;
+    }
+
+
+    /* News section */
+
+    .section {
+        padding-top: 76px;
+        padding-bottom: 78px;
+    }
+
+    .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 27px;
+    }
+
+    .section-heading h2,
+    .two-column h2,
+    .contact-layout h2 {
+        font: 700 36px/1.2 'Playfair Display', Georgia, serif;
+        color: var(--navy);
+        margin: 0;
+    }
+
+    /* News Grid */
+
+    .news-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    .news-card {
+        border: 1px solid var(--line);
+        border-radius: 9px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 8px 24px #10243a08;
+    }
+
+    /* News Card Images */
+
+    .news-art {
+        height: 170px;
+        display: flex;
+        align-items: end;
+        padding: 18px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .news-art:before,
+    .news-art:after {
+        content: '';
+        position: absolute;
+        border: 1px solid #ffffff55;
+        border-radius: 50%;
+        width: 180px;
+        height: 180px;
+        right: -25px;
+        top: -75px;
+    }
+
+    .news-art:after {
+        width: 115px;
+        height: 115px;
+        right: 35px;
+        top: 5px;
+    }
+
+    .news-art span {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    /* News Card Color Themes */
+
+    .art-blue {
+        background: linear-gradient(135deg, #3d0b0b, #8a4545);
+    }
+
+    .art-gold {
+        background: linear-gradient(135deg, #99733a, #e4bd72);
+    }
+
+    .art-green {
+        background: linear-gradient(135deg, #35665e, #8bb7a1);
+    }
+
+    .art-purple {
+        background: linear-gradient(135deg, #555078, #a39bc8);
+    }
+
+    /* News Card Content */
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .meta {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        font-weight: 700;
+        color: #9a702c;
+        margin: 0 0 9px;
+    }
+
+    .meta span {
+        padding: 0 5px;
+        color: #c4cbd1;
+    }
+
+    .card-body h3 {
+        font: 700 19px/1.3 'Playfair Display', Georgia, serif;
+        color: var(--navy);
+        margin: 0 0 9px;
+    }
+
+    .card-body p:not(.meta) {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0 0 14px;
+    }
+
+
+    /* Call to action section */
+
+    .cta-band {
+        background: var(--paper);
+        padding: 42px 0;
+    }
+
+    .cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+    }
+
+    .cta-inner h2 {
+        font: 700 29px 'Playfair Display', Georgia, serif;
+        color: var(--navy);
+        margin: 0;
+    }
+
+    .cta-inner p:not(.eyebrow) {
+        color: var(--muted);
+        margin: 5px 0 0;
+        font-size: 13px;
+    }
+
+
+    /* Footer Section */
+
+    .site-footer {
+        background: var(--navy2);
+        color: #b7c3cd;
+        padding: 27px 0;
+    }
+
+    .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .footer-brand {
+        color: #fff;
+    }
+
+    .footer-brand small {
+        color: #aab7c2;
+    }
+
+    .footer-brand .brand-mark {
+        background: #521313;
+    }
+
+    .footer-inner p {
+        font-size: 11px;
+        margin: 0;
+    }
+
+
+    /* Responsive Design - Tablet Devices */
+
+    @media (max-width: 850px) {
+
+        .header-inner {
+            flex-wrap: wrap;
+            padding: 15px 0;
+        }
+
+        .main-nav {
+            order: 3;
+            width: 100%;
+            justify-content: center;
+            gap: 17px;
+            flex-wrap: wrap;
+        }
+
+        .news-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .featured-card {
+            grid-column: span 2;
+        }
+    }
+
+
+    /* Mobile Devices */
+
+    @media (max-width: 560px) {
+
+        .container {
+            width: min(100% - 30px, 1120px);
+        }
+
+        .header-inner {
+            justify-content: center;
+        }
+
+        .main-nav {
+            gap: 12px;
+        }
+
+        .main-nav a {
+            font-size: 11px;
+        }
+
+        .nav-button {
+            display: none;
+        }
+
+        .hero {
+            min-height: 430px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero-decoration {
+            right: -20%;
+            font-size: 80px;
+        }
+
+        .hero-actions,
+        .cta-inner {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .section {
+            padding-top: 52px;
+            padding-bottom: 55px;
+        }
+
+        .section-heading {
+            align-items: flex-start;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .featured-card {
+            grid-column: auto;
+        }
+
+        .footer-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -50,7 +590,5 @@
 </main>
 
 <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark">RU</span><span>RUHUNA <small>NEWS PORTAL</small></span></a><p>An academic student project • University of Ruhuna</p><p>© 2026 Ruhuna News Portal</p></div></footer>
-
-  
 </body>
 </html>
