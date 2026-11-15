@@ -125,6 +125,37 @@
         letter-spacing: 2px;
     }
 
+    .news-art.has-photo {
+        height: 210px;
+    }
+
+    .news-art img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
+    .news-art.has-photo:before {
+        inset: 0;
+        width: auto;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, .65), transparent 60%);
+        z-index: 1;
+    }
+
+    .news-art.has-photo:after {
+        display: none;
+    }
+
+    .news-art.has-photo span {
+        z-index: 2;
+    }
+
     .art-blue {
         background: linear-gradient(135deg, #3d0b0b, #8a4545);
     }
@@ -269,15 +300,15 @@
     <div class="section-heading"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Latest updates</h2></div><a class="text-link" href="news.html">View all news →</a></div>
     <div class="news-grid">
       <article class="news-card featured-card">
-        <div class="news-art art-blue"><span> CAMPUS LIFE </span></div>
+        <div class="news-art has-photo"><img src="images/news1.jpg" alt="University of Ruhuna women's chess team, first runner up at the Inter-University Championship 2026" style="object-position:center 30%"><span> CAMPUS LIFE </span></div>
         <div class="card-body"><p class="meta">UNIVERSITY NEWS <span>•</span> 14 NOV 2026</p><h3>Discover what is happening across the University of Ruhuna</h3><p>Find campus announcements, student activities and important updates in one place.</p><a href="news.html#:~:text=Colours%20Awarding%20Ceremony" class="text-link">Read more →</a></div>
       </article>
       <article class="news-card">
-        <div class="news-art art-gold"><span> EVENTS </span></div>
+        <div class="news-art has-photo"><img src="images/news2.jpeg" alt="31st General Convocation of the University of Ruhuna" style="object-position:center 40%"><span> EVENTS </span></div>
         <div class="card-body"><p class="meta">EVENTS <span>•</span> CAMPUS</p><h3>University events and student activities</h3><p>Keep an eye on upcoming programmes, workshops and student-led events.</p><a href="news.html#:~:text=Julia%20Tabben" class="text-link">Explore events →</a></div>
       </article>
       <article class="news-card">
-        <div class="news-art art-green"><span> NOTICES </span></div>
+        <div class="news-art has-photo"><img src="images/news5.jpg" alt="Science Faculty Day 2026 poster" style="object-position:center 50%"><span> NOTICES </span></div>
         <div class="card-body"><p class="meta">ANNOUNCEMENTS <span>•</span> UPDATES</p><h3>Important notices for the university community</h3><p>Access useful notices and information for students and staff.</p><a href="news.html#:~:text=Science%20Faculty%20Day" class="text-link">Read updates →</a></div>
       </article>
     </div>
