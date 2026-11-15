@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Ruhuna News</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+     
+
+         /* Contact Layout */
+
+            .contact-layout {
+                display: grid;
+                grid-template-columns: .85fr 1.15fr;
+                gap: 65px;
+                align-items: start;
+            }
+
+            .contact-layout h2 {
+                font: 700 36px/1.2 'Playfair Display', Georgia, serif;
+                color: var(--navy);
+                margin: 0;
+            }
+
+        /* Contact Details */
+
+            .contact-detail {
+                display: flex;
+                flex-direction: column;
+                border-bottom: 1px solid var(--line);
+                padding: 13px 0;
+                font-size: 13px;
+            }
+
+            .contact-detail strong {
+                color: var(--navy);
+            }
+
+            .contact-detail span {
+                color: var(--muted);
+            }
+
+        /* Forms */
+
+            .contact-form {
+                background: var(--paper);
+                padding: 30px;
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+
+            .contact-form label {
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-top: 6px;
+            }
+
+        /* Form Input Fields */
+
+            .contact-form input,
+            .contact-form select,
+            .contact-form textarea {
+                width: 100%;
+                border: 1px solid #dce3e9;
+                border-radius: 5px;
+                padding: 12px;
+
+                font: 13px 'DM Sans', sans-serif;
+
+                background: #fff;
+                color: var(--ink);
+            }
+
+            .contact-form textarea {
+                resize: vertical;
+            }
+
+            .contact-form button {
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+
+            .form-note {
+                font-size: 10px;
+                color: var(--muted);
+                margin: 3px 0 0;
+            }
+
+
+        /*RESPONSIVE DESIGN (CONTACT PAGE)*/
+
+            @media (max-width: 850px) {
+
+                .contact-layout {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+
+            @media (max-width: 560px) {
+
+                .contact-form {
+                    padding: 20px;
+                }
+            }
+    </style>
+
 </head>
+
 <body>
 
     <header class="site-header">
@@ -14,9 +122,18 @@
                 <span class="brand-mark">RU</span>
                 <span>RUHUNA <small>NEWS PORTAL</small></span>
             </a>
+  
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="news.html">Latest News</a>
+                <a href="services.html">Categories</a>
+                <a href="about.html">About</a>
+                <a class="active" href="contact.html">Contact</a> 
+            </nav>
 
+            <a class="nav-button" href="register.html">Join Us</a>
 
-           
+            
         </div>
     </header>
 
@@ -29,6 +146,7 @@
                 <p>Send a question, suggestion or news contribution to the portal team.</p>
             </div>
         </section>
+
         <section class="section container contact-layout">
 
             <div>
@@ -49,19 +167,32 @@
                     <span>Add an official project email here</span>
                 </div>
             </div>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Your name</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+                <label for="topic">Subject</label>
+                <select id="topic" name="topic">
+                    <option value="general">General enquiry</option>
+                    <option value="news">News contribution</option>
+                    <option value="feedback">Website feedback</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                <button class="button button-dark" type="submit">Send message</button>
+                <p class="form-note">Demo only: a backend is required to receive messages.</p>
+            </form>
+
+
         </section>
-
           
-\
-
-
-
   </main>
-
-
-
-
-  
+ 
     <footer class="site-footer">
         <div class="container footer-inner">
             <a class="brand footer-brand" href="index.html">
@@ -69,7 +200,7 @@
                 <span>RUHUNA <small>NEWS PORTAL</small></span>
             </a>
             <p>An academic student project • University of Ruhuna</p>
-            <p>© 2026 Ruhuna News Portal</p>
+            <p>&copy; 2026 Ruhuna News Portal</p>
         </div>
     </footer>
 
