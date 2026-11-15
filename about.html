@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About & Information</title>
+    <title>About & Information | Ruhuna news</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
-        header {
-            background-color: #700c72;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            
+
+        /*page heading*/
+        .page-hero {
+            background: var(--paper);
+            padding: 65px 0 60px;
         }
+
+        .page-hero h1 {
+            font-size: 48px;
+            color: var(--navy);
+        }
+
+        .page-hero p:last-child {
+            color: var(--muted);
+            margin: 13px 0 0;
+        }
+
+        /* About Content */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .body-copy {
+            color: var(--muted);
+            font-size: 14px;
+            max-width: 620px;
+        }
+
         *{
             box-sizing: border-box;
             margin: 0 auto;
@@ -22,7 +45,7 @@
         }
 
         header h1 {
-            color: rgb(215, 224, 232);
+            color: rgb(21, 69, 111);
             }
         header h2 {
             color: rgb(218, 165, 229);
@@ -72,29 +95,82 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="bar">
-             <h1>University News Portal</h1>
-             <p>About and Information Page</p>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="news.html">News</a>
-                <a href="announcements.html">Announcements</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <section>
-        <p>Welcome to <strong>University News Portal!</strong> We are
-             Group 09 and we are dedicated to delivering timely,
-             accurate and engaging coverage of news about events,academic
-             events and students life across the university.</p>
-            <p>Our goal is, to keep students,faculty and the 
-            community members informed while providing an open platform for 
-        creative storytelling.</p>
-        
-    </section>
+
+        <header class="site-header">
+            <div class="container header-inner">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">RU</span>
+                    <span>RUHUNA<small>NEWS PORTAL</small></span>
+                </a>
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a href="news.html">Latest News</a>
+                    <a href="services.html">Categories</a>
+                    <a class="active" href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <a class="nav-button" href="register.html">Join Us</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="container">
+                    <p class="eyebrow">GET TO KNOW US</p>
+                    <h1>About the portal</h1>
+                     <p>Welcome to <strong>RUHUNA News Portal!</strong>
+                        and we are dedicated to delivering timely,
+                    accurate and engaging coverage of news about events,academic
+                    events and students life across the university.</p>
+                </div>
+            </section>
+
+            <section class="section container two-column">
+                <div>
+                    <p class="eyebrow">OUR PURPOSE</p>
+                    <h2>Bringing the Ruhuna community closer.</h2>
+                    <p class="body-copy">Ruhuna News Portal is a student-developed
+                         website concept created to bring university-related news, 
+                         announcements and events together in one accessible place.</p>
+                    <p class="body-copy">The portal aims to make it easier for students,
+                         staff and visitors to discover useful information about university
+                          life.
+                    </p>
+                </div>
+                <div class="info-panel">
+                    <span class="panel-symbol">RU</span>
+                    <h3>University of Ruhuna</h3>
+                    <p>News • Events • Announcements • Campus stories</p>
+                </div>
+            </section>
+
+            <section class="section soft-section">
+                <div class="container">
+                    <div class="section-heading">
+                        <div><p class="eyebrow">OUR VALUES</p>
+                            <h2>What we focus on</h2>
+                        </div>
+                    </div>
+                    <div class="value-grid">
+                        <article><span>01</span>
+                            <h3>Clarity</h3>
+                            <p>Present information in a clear and easy-to-read way.</p>
+                        </article>
+                        <article>
+                            <span>02</span>
+                            <h3>Accessibility</h3>
+                            <p>Make campus updates easy to find and navigate.</p>
+                        </article>
+                        <article>
+                            <span>03</span>
+                            <h3>Community</h3>
+                            <p>Highlight activities and stories from university life.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
     <section>
         <h2>Edit Team and Leadership</h2>
         <hr><br>
@@ -151,14 +227,28 @@
                 <section>
                     <h2>Keep in Touch</h2>
                     <hr><br><br>
-                    <p>Have a news tip or general inquiry? Reach out to us!</p>
+                    <p>Have a news tip or general inquiry?
+                        <a href="contact.html">Reach out to us!</a>
+                    </p>
                     <br> 
                     <div class="contact">
-                        <p><strong>Office Location:</strong>Departement of Computer Science.</p>
-                        <p><strong>General Inquiries:</strong> 
-                            <a href="sadilmaithwarangi@gmail.com"></a>sadilmaithwarangi@gmail.com</p>
-                        <p><strong>News Tips:</strong> <a href="sadilmaithwarangi@gmail.com">sadilmaithwarangi@gmail.com</a></p>
-                        <p><strong>Follow Us:</strong> Instagram: @Campusnews | X: @CampusNews</p>
+                        <p>
+                            <strong>Office Location:</strong>
+                            University News Portal Office, 
+                            Main Administration Building
+                        </p>
+
+                        <p>
+                            <strong>General Inquiries:</strong> 
+                            <a href="sadilmaithwarangi@gmail.com">
+
+                            </a>sadilmaithwarangi@gmail.com
+                        </p>
+
+                        <p>
+                            <strong>Follow Us:</strong>
+                            Instagram: @Campusnews | X: @CampusNews
+                        </p>
                     </div>
 
                 </section>
