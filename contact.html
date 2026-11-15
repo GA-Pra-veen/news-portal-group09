@@ -7,6 +7,111 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <style>
+     
+
+         /* Contact Layout */
+
+            .contact-layout {
+                display: grid;
+                grid-template-columns: .85fr 1.15fr;
+                gap: 65px;
+                align-items: start;
+            }
+
+            .contact-layout h2 {
+                font: 700 36px/1.2 'Playfair Display', Georgia, serif;
+                color: var(--navy);
+                margin: 0;
+            }
+
+        /* Contact Details */
+
+            .contact-detail {
+                display: flex;
+                flex-direction: column;
+                border-bottom: 1px solid var(--line);
+                padding: 13px 0;
+                font-size: 13px;
+            }
+
+            .contact-detail strong {
+                color: var(--navy);
+            }
+
+            .contact-detail span {
+                color: var(--muted);
+            }
+
+        /* Forms */
+
+            .contact-form {
+                background: var(--paper);
+                padding: 30px;
+                border-radius: 10px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+            }
+
+            .contact-form label {
+                font-size: 12px;
+                font-weight: 700;
+                color: var(--navy);
+                margin-top: 6px;
+            }
+
+        /* Form Input Fields */
+
+            .contact-form input,
+            .contact-form select,
+            .contact-form textarea {
+                width: 100%;
+                border: 1px solid #dce3e9;
+                border-radius: 5px;
+                padding: 12px;
+
+                font: 13px 'DM Sans', sans-serif;
+
+                background: #fff;
+                color: var(--ink);
+            }
+
+            .contact-form textarea {
+                resize: vertical;
+            }
+
+            .contact-form button {
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+
+            .form-note {
+                font-size: 10px;
+                color: var(--muted);
+                margin: 3px 0 0;
+            }
+
+
+        /*RESPONSIVE DESIGN (CONTACT PAGE)*/
+
+            @media (max-width: 850px) {
+
+                .contact-layout {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+            }
+
+            @media (max-width: 560px) {
+
+                .contact-form {
+                    padding: 20px;
+                }
+            }
+    </style>
+
 </head>
 
 <body>
@@ -95,7 +200,7 @@
                 <span>RUHUNA <small>NEWS PORTAL</small></span>
             </a>
             <p>An academic student project • University of Ruhuna</p>
-            <p>© 2026 Ruhuna News Portal</p>
+            <p>&copy; 2026 Ruhuna News Portal</p>
         </div>
     </footer>
 
