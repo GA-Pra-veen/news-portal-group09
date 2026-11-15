@@ -1,19 +1,17 @@
-/*CSS VARIABLES*/
+/* ===== COMMON STYLES: shared by all pages (fonts, variables, header/nav, buttons, footer) ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
 :root {
     --navy: #3d0b0b;
     --navy2: #290404;
     --gold: #e7b85c;
-
     --ink: #1d2935;
     --muted: #687786;
-
     --paper: #f6f8fa;
     --line: #e4e9ee;
     --white: #fff;
 }
-
-/*common Styles*/
 
 * {
     box-sizing: border-box;
@@ -39,4 +37,214 @@ a {
 .container {
     width: min(1120px, calc(100% - 44px));
     margin: auto;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    z-index: 2;
+}
+
+.header-inner {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--navy);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+}
+
+.brand small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-top: 5px;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--navy);
+    color: var(--gold);
+    display: grid;
+    place-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #536170;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--navy);
+}
+
+.main-nav a.active {
+    box-shadow: 0 2px var(--gold);
+    padding: 9px 0;
+}
+
+.nav-button {
+    background: var(--navy);
+    color: #fff;
+    padding: 10px 17px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.nav-button:hover,
+.button-dark:hover {
+    background: var(--navy2);
+}
+
+.eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: #b58a3e;
+    margin: 0 0 13px;
+}
+
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 13px 20px;
+    font: 700 13px 'DM Sans', sans-serif;
+    cursor: pointer;
+}
+
+.button-light {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.button-light:hover {
+    background: #f0c979;
+}
+
+.button-dark {
+    background: var(--navy);
+    color: #fff;
+}
+
+.text-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #9a702c;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.light-link {
+    color: #fff;
+}
+
+.section {
+    padding-top: 76px;
+    padding-bottom: 78px;
+}
+
+.site-footer {
+    background: var(--navy2);
+    color: #b7c3cd;
+    padding: 27px 0;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-brand {
+    color: #fff;
+}
+
+.footer-brand small {
+    color: #aab7c2;
+}
+
+.footer-brand .brand-mark {
+    background: #521313;
+}
+
+.footer-inner p {
+    font-size: 11px;
+    margin: 0;
+}
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+        padding: 15px 0;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 17px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .container {
+        width: min(100% - 30px, 1120px);
+    }
+
+    .header-inner {
+        justify-content: center;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .section {
+        padding-top: 52px;
+        padding-bottom: 55px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
