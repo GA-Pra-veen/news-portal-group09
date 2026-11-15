@@ -6,6 +6,129 @@
     <title>Latest News | Ruhuna News</title>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+/* NEWS PAGE HEADER */
+.news-hero {
+    background-color: #f4f6f8;
+    padding: 65px 0 75px;
+}
+
+.news-hero .news-container {
+    max-width: 1380px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.news-label {
+    color: #b77b27;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.news-main-title {
+    font-family: Georgia, serif;
+    font-size: 58px;
+    color: #3b1010;
+    margin: 0 0 12px;
+}
+
+.news-subtitle {
+    color: #66798b;
+    font-size: 19px;
+    margin: 0;
+}
+
+
+/* NEWS LIST */
+.news-list {
+    max-width: 1380px;
+    margin: auto;
+    padding: 65px 20px;
+}
+
+
+/* EACH NEWS ROW */
+.news-row {
+    display: grid;
+    grid-template-columns: 390px 1fr;
+    gap: 50px;
+    align-items: center;
+    padding: 45px 20px;
+    border-bottom: 1px solid #dce1e5;
+}
+
+
+/* NEWS IMAGE */
+.news-art {
+    width: 100%;
+    height: 270px;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.news-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* NEWS TEXT */
+.news-category {
+    color: #a66a1c;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 13px;
+}
+
+.news-title {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    line-height: 1.25;
+    color: #3b1010;
+    margin: 0 0 12px;
+}
+
+.news-description {
+    color: #718092;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .news-main-title {
+        font-size: 38px;
+    }
+
+    .news-row {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 30px 0;
+    }
+
+    .news-art {
+        height: 230px;
+    }
+
+    .news-title {
+        font-size: 23px;
+    }
+
+    .news-hero {
+        padding: 45px 0;
+    }
+
+}
+        
+    </style>
 </head>
 
 
