@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About & Information | Ruhuna news</title>
+
     <link rel="stylesheet" href="style.css">
+
     <style>
 
         /*page heading*/
+
         .page-hero {
             background: var(--paper);
             padding: 65px 0 60px;
@@ -44,16 +49,6 @@
             padding: 0;
         }
 
-        header h1 {
-            color: rgb(21, 69, 111);
-            }
-        header h2 {
-            color: rgb(218, 165, 229);
-        }
-        header p {
-            color: antiquewhite;
-        }
-
         .content {
             width: 1300px;
             margin: 0 auto;
@@ -62,38 +57,118 @@
 
         }
 
-        section {
-            box-sizing: border-box;
-            padding: 0 auto;
-            border: 8px;
-            border-color: #700c72;
-            margin-bottom: 25px;
 
+        /* Information Panel */
+
+        .info-panel {
+            min-height: 260px;
+            border-radius: 12px;
+
+            background: linear-gradient(140deg,var(--navy),#702525);
+
+            color: #fff;
+            padding: 36px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        h2{
-            color: rgb(102, 11, 102);
-            margin-bottom: 15px;
-            padding-bottom: 8px;
-
+        .panel-symbol {
+            font: 700 54px 'Playfair Display', serif;
+            color: var(--gold);
         }
 
-        h3 {
-            color: rgb(55, 0, 62);
-            margin: 15px;
-
+        .info-panel h3 {
+            font: 700 25px 'Playfair Display', serif;
+            margin: 10px 0 0;
+            color: #fff;
+            
         }
+
+        .info-panel p {
+            color: #d1dce5;
+            font-size: 13px;
+        }
+
+        /* Our Values */
+
+        .soft-section {
+            background: var(--paper);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .value-grid article,
+
+        .category-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 9px;
+            padding: 25px;
+        }
+
+        .value-grid article span,
+
+        .category-icon {
+            color: #b58a3e;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .value-grid h3,
+
+        .category-card h2 {
+            font: 700 21px 'Playfair Display', serif;
+            color: var(--navy);
+            margin: 8px 0;
+        }
+
+        .value-grid p,
+        .category-card p {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+         /*Our edit team and leadership*/
+        
+        .edit {
+            padding-top: 100px;
+            width: min(100% - 30px, 1120px);
+            padding-bottom: 100px;
+        }
+
          
-         
+
         .card {
-            background-color: rgb(200, 147, 205);
-            padding: 15px;
-            border-radius: 6px;
-         
+            
+            padding: 20px;
+            padding-left: 40px;
+            border-radius: 8px;
+            background-color: var(--paper);
+        
         }
+
+        .card h3{
+            color: #5e0b0b;
+        }
+
+        h2,h3 {
+            color: #3a0505;
+        }
+
+        
+
         
     </style>
 </head>
+
 <body>
 
         <header class="site-header">
@@ -115,20 +190,28 @@
 
         <main>
             <section class="page-hero">
+
                 <div class="container">
                     <p class="eyebrow">GET TO KNOW US</p>
+
                     <h1>About the portal</h1>
+
                      <p>Welcome to <strong>RUHUNA News Portal!</strong>
                         and we are dedicated to delivering timely,
-                    accurate and engaging coverage of news about events,academic
-                    events and students life across the university.</p>
+                        accurate and engaging coverage of news about events,academic
+                        events and students life across the university.
+                    </p>
+
                 </div>
+
             </section>
 
             <section class="section container two-column">
+
                 <div>
                     <p class="eyebrow">OUR PURPOSE</p>
                     <h2>Bringing the Ruhuna community closer.</h2>
+                    <br>
                     <p class="body-copy">Ruhuna News Portal is a student-developed
                          website concept created to bring university-related news, 
                          announcements and events together in one accessible place.</p>
@@ -171,84 +254,106 @@
             </section>
         </main>
 
-    <section>
-        <h2>Edit Team and Leadership</h2>
-        <hr><br>
-        <p>
-            Our news portal is run by students of the Group 09 under
-            guidance of our academic departement, Departement of Computer
-            Science.
-            <br><br><br><br>
-        </p>
-        <div class="grid">
-            <div class="card">
-                <h3>Team Leader:</h3>
-                <p><strong>Editor in Chief</strong></p>
-                <p><small>email</small></p>
-            </div>
-            <br>
-            <div class="card">
-                <h3>Member</h3>
-                <p><strong>Editor in Home page</strong></p>
-                <p><small>email</small></p>
-            </div>
-            <br>
-            <div class="card">
-                <h3>Member</h3>
-                <p><strong>Editor in About and Information page </strong></p>
-                <p><small>email</small></p>
-            </div>
-            <br>
-            <div class="card">
-                <h3>Member</h3>
-                <p><strong>Editor in Main features and Services page</strong></p>
-                <p><small>email</small></p>
-            </div>
-            <br>
-            <div class="card">
-                <h3>Member</h3>
-                <p><strong>Editor in Contact and Registration page </strong></p>
-                <p><small>email</small></p>
-            </div>
-            <section>
-              <h2>Editorial Standards and Policies</h2>
-              <hr><br><br>
-              <ul>
-                <li><strong>Fact Checking and Corrections:</strong>
-                We aim for 100% accuracy. If you notice a typo or 
-                factual error, please email our editors so we can
-                 update the article imediately.</li><br>
-                <li><strong>Comment Policy:</strong>Comments containing any hamful
-                    discussions will be removed.</li><br>
-                <li><strong>Editorial Independence:</strong>Editorial content 
-                    decisions are made independently by student editors.</li>
+            <section class="edit">
+
+                <h2>Editorial Standards and Policies</h2>
+                <hr>
+                <br><br>
+
+                <ul>
+                    <li><strong>Fact Checking and Corrections:</strong>
+                        We aim for 100% accuracy. If you notice a typo or 
+                        factual error, please email our editors so we can
+                        update the article imediately.</li>
+                    <br>
+                    <li><strong>Comment Policy:</strong>Comments containing any hamful
+                    discussions will be removed.</li>
+                    <br>
+                    <li><strong>Editorial Independence:</strong>Editorial content 
+                        decisions are made independently by student editors.</li>
+
                 </ul>
-                </section> 
+
                 <section>
-                    <h2>Keep in Touch</h2>
-                    <hr><br><br>
-                    <p>Have a news tip or general inquiry?
-                        <a href="contact.html">Reach out to us!</a>
+                    <br><br><br>
+                    
+                    <h2>Our Edit Team and Leadership</h2>
+                    <hr><br>
+                    <p>
+                        Our news portal is run by students of the Group 09 under
+                        guidance of our academic departement, Departement of Computer
+                        Science.
+                        <br><br><br><br>
                     </p>
-                    <br> 
-                    <div class="contact">
-                        <p>
-                            <strong>Office Location:</strong>
-                            University News Portal Office, 
-                            Main Administration Building
-                        </p>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Team Leader: Geeth Praveen</h3>
+                            <p><strong>Editor in Chief</strong></p>
+                            <p><small>Email: geethpraveen.p@gmail.com</small></p>
+                        </div>
 
-                        <p>
-                            <strong>General Inquiries:</strong> 
-                            <a href="sadilmaithwarangi@gmail.com">
+                        <br>
 
-                            </a>sadilmaithwarangi@gmail.com
-                        </p>
+                        <div class="card">
+                            <h3>Editor: Meleesha Gamage</h3>
+                            <p><strong>Editor in Home page</strong></p>
+                            <p><small>Email: meleesha.gamage@gamil.com</small></p>
+                        </div>
 
-                        <p>
-                            <strong>Follow Us:</strong>
-                            Instagram: @Campusnews | X: @CampusNews
-                        </p>
+                        <br>
+
+                        <div class="card">
+                            <h3>Editor: Sadilma Ithwarangi</h3>
+                            <p><strong>Editor in About and Information page </strong></p>
+                            <p><small>Email: sadilmaithwarangi@gmail.com</small></p>
+                        </div>
+
+                        <br>
+
+                        <div class="card">
+                            <h3>Editor: Nirman Basnayaka</h3>
+                            <p><strong>Editor in Services page</strong></p>
+                            <p><small>Email: nirmanbasnayake@gmail.com</small></p>
+                        </div>
+
+                        <br>
+
+                        <div class="card">
+                            <h3>Editor: Rohan Chathurka</h3>
+                            <p><strong>Editor in Contacts page </strong></p>
+                            <p><small>Email: rohanchathurka@gmail.com</small></p>
+                        </div>
                     </div>
-
                 </section>
+                <section>
+                        <br><br><br>
+
+                        <h2>Keep in Touch</h2>
+                        <hr>
+                        <br><br>
+
+                        <p>Have a news tip or general inquiry?
+                            <a href="contact.html">Reach out to us!</a>
+                        </p>
+
+                        <br> 
+
+                        <div class="contact">
+                            <p>
+                                <strong>Office Location:</strong>
+                                University News Portal Office, 
+                                Main Administration Building
+                            </p>
+
+                            <p>
+                                <strong>General Inquiries:</strong> 
+                                <a href="geethpraveen.p@gmail.com">geethpraveen.p@gmail.com</a>
+                            </p>
+
+                            <p>
+                                <strong>Follow Us:</strong>
+                                Instagram: @RuhunaNews | X: @RuhunaNews
+                            </p>
+                        </div>
+                </section>
+            </section>
