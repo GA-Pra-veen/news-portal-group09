@@ -3,6 +3,7 @@
 <head>
     
     <title>Register | Ruhuna News</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
@@ -22,15 +23,22 @@
     </header>
 <main>
 
-<section class="page-hero"><div class="container"><p class="eyebrow">JOIN THE COMMUNITY</p><h1>Portal registration</h1><p>Register your interest in receiving university portal updates.</p></div></section>
+<section class="page-hero">
+    <div class="container">
+        <p class="eyebrow">JOIN THE COMMUNITY</p>
+        <h1>Portal registration</h1>
+        <p>Register your interest in receiving university portal updates.</p>
+    </div>
+</section>
+
   <section class="section container register-wrap">
     
     <form class="contact-form register-form" action="#" method="post">
-        <h2>Create your interest profile</h2>
+        <h2>Create your interest profile</h2><br>
         <label for="fullname">Full name</label>
-        <input id="fullname" name="fullname" type="text" placeholder="Your full name" required>
+        <input id="fullname" name="fullname" type="text" placeholder="Your full name" required><br>
         <label for="regemail">Email address</label>
-        <input id="regemail" name="email" type="email" placeholder="you@example.com" required>
+        <input id="regemail" name="email" type="email" placeholder="you@example.com" required><br>
         <label for="role">I am a</label>
         <select id="role" name="role">
             <option>Student</option>
@@ -38,10 +46,11 @@
             <option>Non-academic staff member</option>
             <option>Visitor</option>
         </select>
-        <label for="faculty">Faculty / Department (optional)</label>
-        <input id="faculty" name="faculty" type="text" placeholder="Enter faculty or department">
-        <button class="button button-dark" type="submit">Submit registration</button>
-        <p class="form-note">Demo only: registration data is not stored. A backend is required for real registration.</p>
+        <br>
+        <label for="faculty">Faculty / Department (optional)</label><br>
+        <input id="faculty" name="faculty" type="text" placeholder="Enter faculty or department"><br><br>
+        <button class="button button-dark" type="submit">Submit registration</button><br>
+  
     </form>
 </section>
 </main>
