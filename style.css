@@ -79,6 +79,12 @@ a {
     display: block;
 }
 
+.logo {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+
 .main-nav {
     display: flex;
     align-items: center;
