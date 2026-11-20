@@ -72,15 +72,11 @@ a {
     margin-top: 5px;
 }
 
-.brand-mark {
+.brand-logo {
     width: 42px;
     height: 42px;
-    border-radius: 12px;
-    color: var(--gold);
-    display: grid;
-    place-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 17px;
+    object-fit: contain;
+    display: block;
 }
 
 .logo {
@@ -196,8 +192,10 @@ a {
     color: #aab7c2;
 }
 
-.footer-brand .brand-mark {
-    background: #521313;
+.footer-brand .brand-logo {
+    background: #fff;
+    padding: 4px;
+    border-radius: 8px;
 }
 
 .footer-inner p {
